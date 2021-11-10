@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>EZ Todo</h1>
+    </header>
+    
+    <main>
+
+        <div id='newitem'>
+            <label>Add a new item:</label>
+            <input type="text" id='newitem-text'>
+            <button id='newitem-btn'>Add Item</button>
+        </div>
+
+        <div>
+            <ul class='item-list'>
+                <li class='item complete'>Item 1</li>
+                <li class='item'>Item 1</li>
+                <li class='item complete'>Item 1</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="filters">
+            <h3>Filter</h3>
+            <button class="filter-uncompleted">Uncompleted</button>
+            <button class="filter-completed">Completed</button>
+            <button class="filter-all">All</button>
+        </div>
+        <br>
+        <div class="remove">
+            <h3>Delete</h3>
+            <button class="remove-completed">Remove Completed</button>
+            <button class="remove-all">Remove All</button>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
