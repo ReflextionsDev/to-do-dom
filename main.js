@@ -12,6 +12,7 @@ function initItems() {
     items.forEach((item) => {
         item.addEventListener('click', () => {
             item.classList.toggle('complete')
+            item.classList.toggle('incomplete')
             sortList()
         })
     })
@@ -40,10 +41,12 @@ function addItem() {
 
         item.innerHTML = newitem_text.value
         item.classList.add('item')
+        item.classList.add('incomplete')
         item_list.appendChild(item)
 
         item.addEventListener('click', () => {
             item.classList.toggle('complete')
+            item.classList.toggle('incomplete')
             sortList()
         })
 

@@ -1,47 +1,3 @@
-
-
-.item-list {
-    display: flex;
-    flex-direction: column;;
-}
-
-
-.item {
-    /* list-style-type: none; */
-    background-color: lightblue;
-
-    border-radius: 4px;
-    margin: 1px;
-    padding: 5px;
-
-    font-weight: 400;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-    color: steelblue;
-    
-
-    font-size: larger;
-
-    list-style: inside;
-        
-    list-style-type: circle;
-
-}
-
-.complete {
-    text-decoration: line-through;
-    background-color: lightgrey;
-    color: slategray;
-
-    list-style-type: disc;
-}
-
-.incomplete {
-    color: green;
-}
-
-
-
 header {
     text-align: center;
 }
@@ -54,5 +10,42 @@ body {
       
 }
 
+.item-list {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
 
+.item {
+    border-radius: 4px;
+    margin: 1px;
+    padding: 5px;
 
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+
+    list-style: inside;
+}
+
+.incomplete {
+    background-color: lightblue;
+    color: steelblue;
+    list-style-type: circle;
+
+}
+
+.complete {
+    background-color: lightgrey;
+    color: slategray;
+    list-style-type: disc;
+    text-decoration: line-through;
+}
+
+.incomplete:hover {
+    background-color: rgb(132, 196, 218);
+}
+
+.complete:hover {
+    background-color: silver;
+}
