@@ -3,6 +3,7 @@
 const item_list = document.querySelector('.item-list')
 
 initItems()
+sortList()
 
 function initItems() {
 
@@ -11,6 +12,7 @@ function initItems() {
     items.forEach((item) => {
         item.addEventListener('click', () => {
             item.classList.toggle('complete')
+            sortList()
         })
     })
 }
@@ -42,10 +44,13 @@ function addItem() {
 
         item.addEventListener('click', () => {
             item.classList.toggle('complete')
+            sortList()
         })
 
         newitem_text.value = ''
     }
+
+    sortList()
 }
 
 // --- Filter ---
@@ -109,12 +114,10 @@ const delete_all = document.querySelector('#remove-all')
 
 delete_completed.addEventListener('click', () => {
     deleteItems('completed')
-    console.log('C')
 })
 
 delete_all.addEventListener('click', () => {
     deleteItems('all')
-    console.log('A')
 })
 
 function deleteItems(criteria) {
@@ -132,4 +135,32 @@ function deleteItems(criteria) {
             item.remove()
         })
     }
+}
+
+// --- Sort ---
+
+function sortList() {
+
+    let itemsAll = []
+    let itemsCompleted = []
+    let itemsIncomplete = []
+    let itemsNew = []
+
+    let items = document.querySelectorAll('.item')
+
+    items.forEach((item) => {
+        itemsAll.push(item)
+    })
+
+    itemsCompleted = itemsAll.filter(item => item.classList[1] === 'complete')
+    itemsIncomplete = itemsAll.filter(item => item.classList[1] !== 'complete')
+    itemsNew = itemsIncomplete.concat(itemsCompleted)
+
+    items.forEach((item) => {
+        item.remove()
+    })
+
+    itemsNew.forEach((item) => {
+        item_list.appendChild(item)
+    })
 }

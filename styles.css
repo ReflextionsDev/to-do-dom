@@ -1,8 +1,58 @@
+
+
+.item-list {
+    display: flex;
+    flex-direction: column;;
+}
+
+
+.item {
+    /* list-style-type: none; */
+    background-color: lightblue;
+
+    border-radius: 4px;
+    margin: 1px;
+    padding: 5px;
+
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    color: steelblue;
+    
+
+    font-size: larger;
+
+    list-style: inside;
+        
+    list-style-type: circle;
+
+}
+
 .complete {
     text-decoration: line-through;
-    color: red;
+    background-color: lightgrey;
+    color: slategray;
+
+    list-style-type: disc;
 }
 
 .incomplete {
     color: green;
 }
+
+
+
+header {
+    text-align: center;
+}
+
+
+body {
+      margin: auto;
+      max-width: max-content;
+      /* border: black 1px solid; */
+      
+}
+
+
+
